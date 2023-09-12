@@ -2,7 +2,9 @@ name: Events exercices
 
 on:
   push:
-    branches: [ dev ]
+    branches:
+      - main
+      - dev
   # workflow_dispatch:
 
 
