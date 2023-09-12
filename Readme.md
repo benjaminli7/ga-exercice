@@ -3,7 +3,7 @@
 ## Events
 [(Event List)](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 
-For this part, you will have to trigger the workflow under specific conditions. Each item on the list correspond to a particular scenario where the workflow should (*or should not*) run.
+For this part, you will have to triger the workflow under specific conditions. Each item on the list correspond to a particular scenario where the workflow should (*or should not*) run.
 
 ### Push
 1. *Create and publish 3 branches, "dev", "staging", "feat/feature-1"*
@@ -59,7 +59,7 @@ Here, you will have to compose with the runner to achieve the demanded results. 
 1. Write a workflow that installs dependancies and runs the test. Specify a default folder for all the steps inside the job.
 
 
-### Matrix 
+### Matrix
 
 1. Create a matrix strategy for a node js app that will install dependancies for node 12, 14, 16
 2. Create a second matrix strategy to test the node app on ubuntu and windows
@@ -68,7 +68,7 @@ Here, you will have to compose with the runner to achieve the demanded results. 
 1. Now, instead of installing node js with the action, use a node image for the tests of the node-app
 
 ### Self-hosted runners
-1. Download the [self-hosted runner script](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners) 
+1. Download the [self-hosted runner script](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners)
 2. Create a workflow that will install the node dependancies, test and run the app (`npm start`)
 3. Look at the result from the job. Why is this a bad idea for public repositories ?
 
