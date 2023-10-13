@@ -1,32 +1,32 @@
-name: Second matrix workflow
+# name: Second matrix workflow
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  matrix:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+# jobs:
+#   matrix:
+#     strategy:
+#       matrix:
+#         os: [ubuntu-latest, windows-latest]
 
-    runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: node-app
+#     runs-on: ${{ matrix.os }}
+#     defaults:
+#       run:
+#         working-directory: node-app
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
+#       - name: Install Dependencies
+#         run: npm install
 
-      - name: Run Tests
-        run: npm test
+#       - name: Run Tests
+#         run: npm test
