@@ -10,9 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [12, 14, 16]
-        # os: [ubuntu-latest, windows-latest]
 
-    # runs-on: ${{ matrix.os }}
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +25,3 @@ jobs:
       - name: Install Dependencies
         run: npm install
         working-directory: node-app
-
-      # - name: Run Tests
-      #   run: npm test
-      #   # working-directory: node-app
