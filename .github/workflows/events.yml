@@ -1,22 +1,30 @@
-name: Events exercices
+name: Runners
 
 on:
   push:
     branches:
-      # - main
-      - dev
-  # workflow_dispatch:
-
+      - main
 
 jobs:
-  print-event:
+  build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Print the event that triggered this workflow
-        run: |
-          echo ${{ github.event_name }}
+    defaults:
+      run:
+        working-directory: node-app
 
-      - name: Print the current time
-        run: |
-          echo $(date)
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
